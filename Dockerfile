@@ -10,5 +10,5 @@ WORKDIR ~/app
 RUN meteor create --full ~/app && cd ~/app && \
     meteor add dispatch:mocha-phantomjs && \
     meteor npm i  
-RUN meteor test --once --driver-package dispatch:mocha-phantomjs
+RUN cd ~/app &&  meteor test --once --driver-package dispatch:mocha-phantomjs
     
